@@ -7,10 +7,6 @@ PSK=0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F20
 #
 fakeprivk=0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
 #
-rm *.pem
-rm *.crt
-rm *.txt
-#
 echo generating public and private key within pNHSM at index 12
 echo c11
 echo -ne ".c11\r\n" | openssl  s_client -quiet -connect $IP:$PORT -servername $SEN -psk_identity $ID -psk $PSK -tls1_3  -groups P-256 -cipher DHE -ciphersuites  TLS_AES_128_CCM_SHA256 -no_ticket  2>/dev/null
