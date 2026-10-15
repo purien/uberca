@@ -9,7 +9,7 @@ set PSK=0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F20
 REM
 set fakeprivk=0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF
 REM
-echo generating public and private key within pNHSM at index 12
+echo generating public and private key within pNHSM at index 11
 echo c11
 echo .c11|openssl s_client -quiet -tls1_3 -connect %IP%:%PORT% -servername %SEN% -psk %PSK% -psk_identity %ID% -groups P-256 -cipher DHE -ciphersuites TLS_AES_128_CCM_SHA256 -no_ticket 2>nul 
 echo g11
